@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name                    = "rhinestone-jekyll-theme"
-  spec.version                 = "1.0.0"
+  spec.version                 = "1.0.1"
   spec.authors                 = ["Devnite Creative"]
   spec.email                   = ["tfnlmfao@gmail.com"]
 
