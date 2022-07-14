@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.homepage                = "https://github.com/DevniteCreative/Rhinestone"
   spec.license                 = "MIT"
 
-  spec.metadata["plugin_type"] = "by"
+  spec.metadata["plugin_type"] = "Created by"
 
   spec.files                   = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
 
