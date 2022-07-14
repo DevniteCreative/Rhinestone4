@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-    --blue: #cc0000;
+    --blue: #a50b5e;
     --indigo: #6610f2;
     --purple: #6f42c1;
     --pink: #e83e8c;
@@ -18,7 +18,7 @@
     --white: #fff;
     --gray: #6c757d;
     --gray-dark: #343a40;
-    --primary: #cc0000;
+    --primary: #a50b5e;
     --secondary: #6c757d;
     --success: #28a745;
     --info: #17a2b8;
@@ -143,7 +143,7 @@ sup {
 }
 
 a {
-    color: #cc0000;
+    color: #a50b5e;
     text-decoration: none;
     background-color: transparent
 }
@@ -2625,8 +2625,8 @@ a.btn.disabled,fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #cc0000;
-    border-color: #cc0000
+    background-color: #a50b5e;
+    border-color: #a50b5e
 }
 
 .btn-primary:hover {
@@ -2644,8 +2644,8 @@ a.btn.disabled,fieldset:disabled a.btn {
 
 .btn-primary.disabled,.btn-primary:disabled {
     color: #fff;
-    background-color: #cc0000;
-    border-color: #cc0000
+    background-color: #a50b5e;
+    border-color: #a50b5e
 }
 
 .btn-primary:not(:disabled):not(.disabled).active,.btn-primary:not(:disabled):not(.disabled):active,.show>.btn-primary.dropdown-toggle {
@@ -2904,14 +2904,14 @@ a.btn.disabled,fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-    color: #cc0000;
-    border-color: #cc0000
+    color: #a50b5e;
+    border-color: #a50b5e
 }
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #cc0000;
-    border-color: #cc0000
+    background-color: #a50b5e;
+    border-color: #a50b5e
 }
 
 .btn-outline-primary.focus,.btn-outline-primary:focus {
@@ -2919,14 +2919,14 @@ a.btn.disabled,fieldset:disabled a.btn {
 }
 
 .btn-outline-primary.disabled,.btn-outline-primary:disabled {
-    color: #cc0000;
+    color: #a50b5e;
     background-color: transparent
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled).active,.btn-outline-primary:not(:disabled):not(.disabled):active,.show>.btn-outline-primary.dropdown-toggle {
     color: #fff;
-    background-color: #cc0000;
-    border-color: #cc0000
+    background-color: #a50b5e;
+    border-color: #a50b5e
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled).active:focus,.btn-outline-primary:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-primary.dropdown-toggle:focus {
@@ -3145,7 +3145,7 @@ a.btn.disabled,fieldset:disabled a.btn {
 
 .btn-link {
     font-weight: 400;
-    color: #cc0000;
+    color: #a50b5e;
     text-decoration: none
 }
 
@@ -3442,7 +3442,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 .dropdown-item.active,.dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #cc0000
+    background-color: #a50b5e
 }
 
 .dropdown-item.disabled,.dropdown-item:disabled {
@@ -3748,8 +3748,8 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 
 .custom-control-input:checked~.custom-control-label::before {
     color: #fff;
-    border-color: #cc0000;
-    background-color: #cc0000
+    border-color: #a50b5e;
+    background-color: #a50b5e
 }
 
 .custom-control-input:focus~.custom-control-label::before {
@@ -3813,8 +3813,8 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 }
 
 .custom-checkbox .custom-control-input:indeterminate~.custom-control-label::before {
-    border-color: #cc0000;
-    background-color: #cc0000
+    border-color: #a50b5e;
+    background-color: #a50b5e
 }
 
 .custom-checkbox .custom-control-input:indeterminate~.custom-control-label::after {
@@ -4048,7 +4048,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     width: 1rem;
     height: 1rem;
     margin-top: -.25rem;
-    background-color: #cc0000;
+    background-color: #a50b5e;
     border: 0;
     border-radius: 1rem;
     -webkit-transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -4081,7 +4081,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 .custom-range::-moz-range-thumb {
     width: 1rem;
     height: 1rem;
-    background-color: #cc0000;
+    background-color: #a50b5e;
     border: 0;
     border-radius: 1rem;
     -moz-transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -4117,7 +4117,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     margin-top: 0;
     margin-right: .2rem;
     margin-left: .2rem;
-    background-color: #cc0000;
+    background-color: #a50b5e;
     border: 0;
     border-radius: 1rem;
     -ms-transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -4251,7 +4251,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 
 .nav-pills .nav-link.active,.nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #cc0000
+    background-color: #a50b5e
 }
 
 .nav-fill .nav-item,.nav-fill>.nav-link {
@@ -5007,7 +5007,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     padding: .5rem .75rem;
     margin-left: -1px;
     line-height: 1.25;
-    color: #cc0000;
+    color: #a50b5e;
     background-color: #fff;
     border: 1px solid #dee2e6
 }
@@ -5040,8 +5040,8 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 .page-item.active .page-link {
     z-index: 3;
     color: #fff;
-    background-color: #cc0000;
-    border-color: #cc0000
+    background-color: #a50b5e;
+    border-color: #a50b5e
 }
 
 .page-item.disabled .page-link {
@@ -5124,7 +5124,7 @@ a.badge:focus,a.badge:hover {
 
 .badge-primary {
     color: #fff;
-    background-color: #cc0000
+    background-color: #a50b5e
 }
 
 a.badge-primary:focus,a.badge-primary:hover {
@@ -5444,7 +5444,7 @@ a.badge-dark.focus,a.badge-dark:focus {
     color: #fff;
     text-align: center;
     white-space: nowrap;
-    background-color: #cc0000;
+    background-color: #a50b5e;
     transition: width .6s ease
 }
 
@@ -5538,8 +5538,8 @@ a.badge-dark.focus,a.badge-dark:focus {
 .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #cc0000;
-    border-color: #cc0000
+    background-color: #a50b5e;
+    border-color: #a50b5e
 }
 
 .list-group-item+.list-group-item {
@@ -6725,7 +6725,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-    background-color: #cc0000!important
+    background-color: #a50b5e!important
 }
 
 a.bg-primary:focus,a.bg-primary:hover,button.bg-primary:focus,button.bg-primary:hover {
@@ -6837,7 +6837,7 @@ a.bg-dark:focus,a.bg-dark:hover,button.bg-dark:focus,button.bg-dark:hover {
 }
 
 .border-primary {
-    border-color: #cc0000!important
+    border-color: #a50b5e!important
 }
 
 .border-secondary {
@@ -10251,7 +10251,7 @@ a.bg-dark:focus,a.bg-dark:hover,button.bg-dark:focus,button.bg-dark:hover {
 }
 
 .text-primary {
-    color: #cc0000!important
+    color: #a50b5e!important
 }
 
 a.text-primary:focus,a.text-primary:hover {
