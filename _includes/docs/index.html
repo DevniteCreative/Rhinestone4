@@ -35,7 +35,7 @@
   {% endfor %}
 
   <!-- Local Projects -->
-  {% for docs in site.docs %}
+  {% for project in site.docs %}
 
     {%- assign project_type  = "local" -%}
     {%- assign project_id    = project.name | slugify -%}
