@@ -4,22 +4,22 @@
   <!-- Local Docs -->
   {% for docs in site.docs %}
 
-    {%- assign project_type  = "local" -%}
-    {%- assign project_id    = project.name | slugify -%}
-    {%- assign project_img   = project.image -%}
-    {%- assign project_name  = project.name -%}
-    {%- assign project_desc  = project.description -%}
-    {%- assign project_tools = project.tools -%}
+    {%- assign docs_type  = "local" -%}
+    {%- assign docs_id    = docs.name | slugify -%}
+    {%- assign docs_img   = docs.image -%}
+    {%- assign docs_name  = docs.name -%}
+    {%- assign docs_desc  = docs.description -%}
+    {%- assign docs_tools = docs.tools -%}
 
-    {%- if project.external_url -%}
-      {%- assign project_url = project.external_url -%}
+    {%- if docs.external_url -%}
+      {%- assign docs_url = docs.external_url -%}
       {%- assign external    = true -%}
     {%- else -%}
-      {%- assign project_url = project.url | relative_url -%}
+      {%- assign docs_url = docs.url | relative_url -%}
       {%- assign external    = false -%}
     {%- endif -%}
 
-    {% include docs/project-card.html %}
+    {% include docs/docs-card.html %}
 
   {% endfor %}
 
