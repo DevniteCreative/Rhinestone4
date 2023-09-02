@@ -1,25 +1,25 @@
 
 <div class="card-columns m-3 mt-5">
 
-  <!-- Local Docs -->
-  {% for docs in site.uedn %}
+  <!-- Local uedn -->
+  {% for uedn in site.uedn %}
 
-    {%- assign docs_type  = "local" -%}
-    {%- assign docs_id    = docs.name | slugify -%}
-    {%- assign docs_img   = docs.image -%}
-    {%- assign docs_name  = docs.name -%}
-    {%- assign docs_desc  = docs.description -%}
-    {%- assign docs_tools = docs.tools -%}
+    {%- assign uedn_type  = "local" -%}
+    {%- assign uedn_id    = uedn.name | slugify -%}
+    {%- assign uedn_img   = uedn.image -%}
+    {%- assign uedn_name  = uedn.name -%}
+    {%- assign uedn_desc  = uedn.description -%}
+    {%- assign uedn_tools = uedn.tools -%}
 
-    {%- if docs.external_url -%}
-      {%- assign docs_url = docs.external_url -%}
+    {%- if uedn.external_url -%}
+      {%- assign uedn_url = uedn.external_url -%}
       {%- assign external    = true -%}
     {%- else -%}
-      {%- assign docs_url = docs.url | relative_url -%}
+      {%- assign uedn_url = uedn.url | relative_url -%}
       {%- assign external    = false -%}
     {%- endif -%}
 
-    {% include uedn/docs-card.html %}
+    {% include uedn/uedn-card.html %}
 
   {% endfor %}
 
