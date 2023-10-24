@@ -1,26 +1,26 @@
-<!-- Collect tools from all posts -->
-{%- assign tools = blank -%}
+<!-- Collect tools from all uedns -->
+{%- assign uedn_tools = blank -%}
 {%- for uedn in site.uedn -%}
   {%- assign uedn_tools = uedn_tools | join:'|' | append:'|' -%}
   {%- if uedn_tools != '|' -%}
-    {%- assign tools = tools | append:uedn_tools -%}
+    {%- assign uedn_tools = uedn_tools | append:uedn_tools -%}
   {%- endif -%}
 {%- endfor -%}
-{%- assign tools = tools | split:'|' | uniq | sort -%}
+{%- assign uedn_tools = uedn_tools | split:'|' | uniq | sort -%}
 
-<!-- List tools & related posts -->
-{% for tool in tools %}
+<!-- List tools & related uedns -->
+{% for uedn_tools in uedn_tools %}
 <div class="py-3">
-  <h4 id="{{ tool | slugify }}">{{ tool }}</h4>
+  <h4 id="{{ uedn_tools | slugify }}">{{ uedn_tools }}</h4>
   <ol>
   {% for uedn in site.uedn %}
-    {%- if uedn_tools contains tool -%}
+    {%- if uedn_tools contains uedn_tools -%}
       {%- if uedn.external_url -%}
         {%- assign uedn_url = uedn.external_url -%}
       {%- else -%}
         {%- assign uedn_url = uedn.url | relative_url -%}
       {%- endif -%}
-    <a href="{{ url }}"><li>{{ uedn_name }}</li></a>
+    <a href="{{ uedn_url }}"><li>{{ uedn_id }}</li></a>
     <br/>
     {%- endif -%}
   {% endfor %}
