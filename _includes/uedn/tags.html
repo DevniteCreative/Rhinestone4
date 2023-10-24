@@ -1,5 +1,5 @@
-<!-- Collect tags from all posts -->
-{%- assign tags = blank -%}
+<!-- Collect tools from all posts -->
+{%- assign tools = blank -%}
 {%- for uedn in site.uedn -%}
   {%- assign uedn_tools = uedn_tools | join:'|' | append:'|' -%}
   {%- if uedn_tools != '|' -%}
@@ -8,7 +8,7 @@
 {%- endfor -%}
 {%- assign tools = tools | split:'|' | uniq | sort -%}
 
-<!-- List tags & related posts -->
+<!-- List tools & related posts -->
 {% for tool in tools %}
 <div class="py-3">
   <h4 id="{{ tool | slugify }}">{{ tool }}</h4>
