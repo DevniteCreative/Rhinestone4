@@ -9,12 +9,12 @@
 {%- assign uedn_tools = uedn_tools | split:'|' | uniq | sort -%}
 
 <!-- List tools & related uedns -->
-{% for uedn_tools in uedn_tools %}
+{% for tools in uedn_tools %}
 <div class="py-3">
   <h4 id="{{ uedn_tools | slugify }}">{{ uedn_tools }}</h4>
   <ol>
   {% for uedn in site.uedn %}
-    {%- if uedn_tools contains uedn_tools -%}
+    {%- if tools contains uedn_tools -%}
       {%- if uedn.external_url -%}
         {%- assign uedn_url = uedn.external_url -%}
       {%- else -%}
