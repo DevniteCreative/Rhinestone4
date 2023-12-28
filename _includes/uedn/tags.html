@@ -20,7 +20,7 @@
       {%- else -%}
         {%- assign url = uedn.url | relative_url -%}
       {%- endif -%}
-    <a href="{{ url }}"><li>{{ uedn.title }}</li></a>
+    <a href="{{ url }}"><li>{{ uedn.name }}</li></a>
     <small class="text-muted"> - {{ uedn.date | date_to_long_string }}</small>
     <br/>
     {%- endif -%}
