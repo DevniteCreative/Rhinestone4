@@ -17,9 +17,9 @@ nav.navbar-themed {
     position: relative;
 }
 
-body.no-animation * {
-  animation: none !important;
-  transition: none !important;
+body.no-animation nav.navbar-themed * {
+    animation: none !important;
+    transition: none !important;
 }
 
 nav.navbar-themed a {
@@ -45,7 +45,7 @@ nav.navbar-themed a::after {
     content: '';
     display: block;
     position: absolute;
-    bottom: -2; /* Positioniert die Leiste am unteren Rand */
+    bottom: -2px; /* Positioniert die Leiste am unteren Rand */
     left: 0;
     width: 100%;
     height: 0;
