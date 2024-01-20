@@ -103,7 +103,9 @@ nav a:not(:hover):not(.active)::after {
     text-decoration: none;
   animation: slideOutBar 0.3s forwards;
 }
-
+ dropdown-toggle {
+    color: #fff;
+}
 
   text {
     padding: 6px;
