@@ -6,14 +6,9 @@
     <i class="fas fa-1x fa-bars text-themed"></i>
 </button-->
 
- <div class="dropdown">
-    <a class="dropdown-toggle" href="#" role="button" id="privacyDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Privacy Policy
-    </a>
-    <div class="dropdown-menu" aria-labelledby="privacyDropdown">
-      <a class="dropdown-item" href="#">Link 1</a>
-      <a class="dropdown-item" href="#">Link 2</a>
-    </div>
+<div class="navbar-dropdown" id="privacyDropdown">
+    <a class="nav-item nav-link" href="{{ site.privacy_policy.url | relative_url }}">Privacy Policy</a>
+    <!-- Weitere Links können hier hinzugefügt werden -->
   </div>
   
   <!--div class="collapse navbar-collapse" id="navbarNavAltMarkup"-->
@@ -69,3 +64,15 @@
     <!-- /div -->
 
 </nav>
+<script>
+  // Füge JavaScript-Code hinzu, um das Dropdown bei Hover anzuzeigen
+  var privacyDropdown = document.getElementById('privacyDropdown');
+
+  privacyDropdown.addEventListener('mouseenter', function() {
+    privacyDropdown.classList.add('show');
+  });
+
+  privacyDropdown.addEventListener('mouseleave', function() {
+    privacyDropdown.classList.remove('show');
+  });
+</script>
