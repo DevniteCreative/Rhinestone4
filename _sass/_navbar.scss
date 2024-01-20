@@ -40,7 +40,7 @@ nav a::after {
     content: '';
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: 0; /* Positioniert die Leiste am unteren Rand */
     left: 0;
     width: 100%;
     height: 0;
