@@ -17,6 +17,22 @@
     position: relative;
   }
 
+  .dropdown-menu {
+    background-color: rgb(39, 39, 39);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 17px;
+    margin-right: 10px;
+    margin-bottom: -2px;
+    position: relative;
+    font-size: 11px;
+    letter-spacing: 1.05px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+  }
+
   nav a {
     text-decoration: none;
     color: #fff;
