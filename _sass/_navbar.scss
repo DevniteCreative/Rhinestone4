@@ -77,7 +77,6 @@ nav a:not(:hover):not(.active)::after {
     color: #fff;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 17px;
     margin-right: 10px;
     margin-bottom: -2px;
     position: relative;
@@ -103,6 +102,13 @@ nav a:not(:hover):not(.active)::after {
   text-decoration: none; /* Keine Unterstreichung der Links */
   display: block; /* Jedes Element als Block anzeigen */
 }
+
+/* Stile für den Bootstrap-Button ohne den blauen Fokus-Effekt */
+.btn:focus, .btn:active {
+  outline: none;
+  box-shadow: none;
+}
+
 
 /* Hervorhebungseffekt beim Überfahren eines Dropdown-Elements */
 .dropdown-item:hover {
