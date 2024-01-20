@@ -1,23 +1,24 @@
-/* Keyframes should be defined before they're used */
+/* Keyframes sollten definiert werden, bevor sie verwendet werden */
 @keyframes slideBar {
     from { height: 0; }
-    to { height: 5px; }
-  }
+    to { height: 0.15em; }
+}
 
-  @keyframes slideOutBar {
-    from { height: 5px; }
+@keyframes slideOutBar {
+    from { height: 0.15em; }
     to { height: 0; }
-  }
+}
 
-  /* Custom Navbar Styles */
-  nav {
+/* Benutzerdefinierte Navbar-Stile */
+nav {
     background-color: rgb(39, 39, 39);
     padding: 2px;
     display: flex;
     position: relative;
-  }
+}
 
-  nav-item {
+.nav-link,
+.navbar-brand {
     text-decoration: none;
     color: #fff;
     padding-left: 10px;
@@ -29,41 +30,55 @@
     font-size: 11px;
     letter-spacing: 1.05px;
     line-height: 16px;
-  }
+}
 
-  nav-item:hover {
+.nav-link:hover,
+.navbar-brand:hover {
     color: rgb(255, 255, 0);
-  }
+}
 
-  nav-item::after {
+.nav-link::after,
+.navbar-brand::after {
     content: '';
     display: block;
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 0;
     background-color: rgb(255, 255, 0);
-    transition: height 0.3s;
-  }
+    transition: height 0.3s, width 0.35s;
+}
 
-  nav-item.active::after {
-    height: 5px;
+.nav-item.active::after {
+    height: 0.15em;
     animation: slideBar 0.3s forwards;
-  }
+    width: 100% !important;
+}
 
-  nav-item:not(.active):hover::after {
-    height: 5px;
+.nav-link:not(.active):hover::after,
+.navbar-brand:not(.active):hover::after {
+    height: 0.15em;
     animation: slideBar 0.3s forwards;
-  }
+    width: 100%;
+}
 
-  nav-item:not(:hover):not(.active)::after {
+.nav-link:not(:hover):not(.active)::after,
+.navbar-brand:not(:hover):not(.active)::after {
     animation: slideOutBar 0.3s forwards;
-  }
-        text {
+}
+
+.navbar-brand {
+    margin-bottom: -14px;
+    &::after {
+        margin-top: -0.25em;
+    }
+}
+
+text {
     font-size: 16px;
     font-weight: 700;
     line-height: 40px;
     text-transform: capitalize;
-padding: 6px;
-    }
+    padding: 6px;
+}
