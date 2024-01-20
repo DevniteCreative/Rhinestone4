@@ -17,6 +17,11 @@ nav {
     position: relative;
 }
 
+body.no-animation * {
+  animation: none !important;
+  transition: none !important;
+}
+
 nav a {
     text-decoration: none;
     color: #fff;
