@@ -94,3 +94,18 @@ nav a:not(:hover):not(.active)::after {
     text-transform: capitalize;
 padding: 6px;
     }
+
+  nav a.text {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 17px;
+    margin-right: 10px;
+    margin-bottom: -2px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+  }
