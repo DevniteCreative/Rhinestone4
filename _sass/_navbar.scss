@@ -90,18 +90,33 @@ nav a:not(:hover):not(.active)::after {
 }
  .btn.dropdown-toggle {
     background-color: rgb(39, 39, 39);
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 17px;
-    margin-right: 10px;
-    margin-bottom: -2px;
     position: relative;
     font-size: 11px;
     letter-spacing: 1.05px;
     line-height: 16px;
     text-transform: uppercase;
-    text-decoration: none;
     color: #fff;
+       border: 0px solid #dee2e6; /* Rand des Menüs */
+}
+
+.dropdown-menu {
+  background-color: rgb(39, 39, 39); /* Hintergrundfarbe des Menüs */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Schatten des Menüs */
+  border: 1px solid #dee2e6; /* Rand des Menüs */
+}
+
+/* Stile für Dropdown-Elemente im Menü */
+.dropdown-item {
+  color: #495057; /* Textfarbe der Dropdown-Elemente */
+  padding: 8px 16px; /* Innenabstand der Dropdown-Elemente */
+  text-decoration: none; /* Keine Unterstreichung der Links */
+  display: block; /* Jedes Element als Block anzeigen */
+}
+
+/* Hervorhebungseffekt beim Überfahren eines Dropdown-Elements */
+.dropdown-item:hover {
+  background-color: rgb(45, 45, 45); /* Hintergrundfarbe bei Hover */
+  color: #fff; /* Textfarbe bei Hover */
 }
 
   text {
