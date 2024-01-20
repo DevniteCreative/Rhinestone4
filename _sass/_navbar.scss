@@ -1,28 +1,23 @@
-/* Keyframes für die Animationsleisten */
+/* Keyframes should be defined before they're used */
 @keyframes slideBar {
     from { height: 0; }
     to { height: 5px; }
-}
+  }
 
-@keyframes slideOutBar {
+  @keyframes slideOutBar {
     from { height: 5px; }
     to { height: 0; }
-}
+  }
 
-/* Benutzerdefinierte Navbar-Stile */
-nav.navbar-themed {
+  /* Custom Navbar Styles */
+  nav {
     background-color: rgb(39, 39, 39);
     padding: 2px;
     display: flex;
     position: relative;
-}
+  }
 
-body.no-animation nav.navbar-themed * {
-    animation: none !important;
-    transition: none !important;
-}
-
-nav.navbar-themed a {
+  nav a {
     text-decoration: none;
     color: #fff;
     padding-left: 10px;
@@ -32,45 +27,43 @@ nav.navbar-themed a {
     margin-bottom: -2px;
     position: relative;
     font-size: 11px;
-    text-transform: capitalize;
     letter-spacing: 1.05px;
     line-height: 16px;
-}
+  }
 
-nav.navbar-themed a:hover {
+  nav a:hover {
     color: rgb(255, 255, 0);
-}
+  }
 
-nav.navbar-themed a::after {
+  nav a::after {
     content: '';
     display: block;
     position: absolute;
-    bottom: -2px; /* Positioniert die Leiste am unteren Rand */
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 0;
     background-color: rgb(255, 255, 0);
     transition: height 0.3s;
-}
+  }
 
-nav.navbar-themed a.active::after {
+  nav a.active::after {
     height: 5px;
     animation: slideBar 0.3s forwards;
-}
+  }
 
-nav.navbar-themed a:not(.active):hover::after {
+  nav a:not(.active):hover::after {
     height: 5px;
     animation: slideBar 0.3s forwards;
-}
+  }
 
-nav.navbar-themed a:not(:hover):not(.active)::after {
+  nav a:not(:hover):not(.active)::after {
     animation: slideOutBar 0.3s forwards;
-}
-
-text {
+  }
+        text {
     font-size: 16px;
     font-weight: 700;
     line-height: 40px;
     text-transform: capitalize;
-    padding: 6px;
-}
+padding: 6px;
+    }
