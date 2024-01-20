@@ -100,6 +100,8 @@ nav a:not(:hover):not(.active)::after {
     line-height: 16px;
     text-transform: uppercase;
        border: 0px solid #dee2e6; /* Rand des Menüs */
+     outline: none;
+  box-shadow: none;
 }
 
 .dropdown-menu {
