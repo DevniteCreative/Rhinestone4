@@ -5,12 +5,6 @@
   <!--button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fas fa-1x fa-bars text-themed"></i>
 </button-->
-
-<div class="navbar-dropdown" id="privacyDropdown">
-    <a class="nav-item nav-link" href="{{ site.privacy_policy.url | relative_url }}">Privacy Policy</a>
-    <a class="nav-item nav-link" href="{{ site.privacy_policy.url | relative_url }}">Prvacy Policy</a>
-    <a class="nav-item nav-link" href="{{ site.privacy_policy.url | relative_url }}">Privcy Policy</a>
-  </div>
   
   <!--div class="collapse navbar-collapse" id="navbarNavAltMarkup"-->
     <!-- div class="navbar-nav ml-auto" -->
@@ -65,15 +59,3 @@
     <!-- /div -->
 
 </nav>
-<script>
-  // Füge JavaScript-Code hinzu, um das Dropdown bei Hover anzuzeigen
-  var privacyDropdown = document.getElementById('privacyDropdown');
-
-  privacyDropdown.addEventListener('mouseenter', function() {
-    privacyDropdown.classList.add('show');
-  });
-
-  privacyDropdown.addEventListener('mouseleave', function() {
-    privacyDropdown.classList.remove('show');
-  });
-</script>
