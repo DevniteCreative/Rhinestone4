@@ -6,24 +6,16 @@
     <i class="fas fa-1x fa-bars text-themed"></i>
 </button-->
 <div class="dropdown">
-<button class="btn dropdown-toggle" type="button" id="modesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
       Modes
     </button>
-    <div class="dropdown-menu" aria-labelledby="modesDropdown">
+    <div class="dropdown-menu">
       <!-- Hier kannst du Links oder Inhalte für das Dropdown-Menü hinzufügen -->
       <a class="dropdown-item" href="#">Battle Royale</a>
       <a class="dropdown-item" href="#">Creative</a>
       <a class="dropdown-item" href="#">Protect The City</a>
       <a class="dropdown-item" href="#">Highgames (LTM)</a>
       <a class="dropdown-item" href="#">Unreal Editor for DevNite</a>
-    </div>
-  <button class="btn dropdown-toggle" type="button" id="privacyDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Legal
-    </button>
-    <div class="dropdown-menu" aria-labelledby="privacyDropdown">
-      <!-- Hier kannst du Links oder Inhalte für das Dropdown-Menü hinzufügen -->
-      <a class="dropdown-item" href="#">Privacy Policy</a>
-      <a class="dropdown-item" href="#">Terms Of Use (TOS)</a>
     </div></div>
   <!--div class="collapse navbar-collapse" id="navbarNavAltMarkup"-->
     <!-- div class="navbar-nav ml-auto" -->
@@ -75,7 +67,15 @@
       {% endfor %}
       <!-- span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span -->
     <!-- /div -->
-
+<div class="dropdown">
+  <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
+      Legal
+    </button>
+    <div class="dropdown-menu">
+      <!-- Hier kannst du Links oder Inhalte für das Dropdown-Menü hinzufügen -->
+      <a class="dropdown-item" href="#">Privacy Policy</a>
+      <a class="dropdown-item" href="#">Terms Of Use (TOS)</a>
+    </div></div>
 </nav>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
