@@ -5,7 +5,7 @@
   <!--button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fas fa-1x fa-bars text-themed"></i>
 </button-->
-
+<div class="dropdown">
 <button class="btn dropdown-toggle" type="button" id="modesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Modes
     </button>
@@ -17,7 +17,14 @@
       <a class="dropdown-item" href="#">Highgames (LTM)</a>
       <a class="dropdown-item" href="#">Unreal Editor for DevNite</a>
     </div>
-  
+  <button class="btn dropdown-toggle" type="button" id="privacyDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Legal
+    </button>
+    <div class="dropdown-menu" aria-labelledby="privacyDropdown">
+      <!-- Hier kannst du Links oder Inhalte für das Dropdown-Menü hinzufügen -->
+      <a class="dropdown-item" href="#">Privacy Policy</a>
+      <a class="dropdown-item" href="#">Terms Of Use (TOS)</a>
+    </div></div>
   <!--div class="collapse navbar-collapse" id="navbarNavAltMarkup"-->
     <!-- div class="navbar-nav ml-auto" -->
 
@@ -66,14 +73,6 @@
         <a class="{{ active_status }}" href="{{ url }}" {%- if html_page.external_url and site.open_new_tab -%} {%- endif -%} >{{ html_page.title }}</a>
 
       {% endfor %}
-<button class="btn dropdown-toggle" type="button" id="privacyDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Legal
-    </button>
-    <div class="dropdown-menu" aria-labelledby="privacyDropdown">
-      <!-- Hier kannst du Links oder Inhalte für das Dropdown-Menü hinzufügen -->
-      <a class="dropdown-item" href="#">Privacy Policy</a>
-      <a class="dropdown-item" href="#">Terms Of Use (TOS)</a>
-    </div>
       <!-- span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span -->
     <!-- /div -->
 
