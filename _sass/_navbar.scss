@@ -71,8 +71,20 @@ nav a:not(:hover):not(.active)::after,
 
 /* Styles for the Bootstrap dropdown */
 .btn.dropdown-toggle {
+  text-decoration: none;
   color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 17px;
+  margin-right: 10px;
+  margin-bottom: -2px;
+  position: relative;
+  font-size: 11px;
+  letter-spacing: 1.05px;
+  line-height: 16px;
   text-transform: uppercase;
+  box-sizing: border-box; /* Include padding and border in total width and height */
+  
   border: 0px solid #dee2e6; /* Menu border */
   outline: none;
   box-shadow: none;
