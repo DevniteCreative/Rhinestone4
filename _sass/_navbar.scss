@@ -1,94 +1,80 @@
 /* Keyframes should be defined before they're used */
 @keyframes slideBar {
-    from { height: 0; }
-    to { height: 5px; }
-  }
+  from { height: 0; }
+  to { height: 5px; }
+}
 
-  @keyframes slideOutBar {
-    from { height: 5px; }
-    to { height: 0; }
-  }
+@keyframes slideOutBar {
+  from { height: 5px; }
+  to { height: 0; }
+}
 
-  /* Custom Navbar Styles */
-  nav {
-    background-color: rgb(39, 39, 39);
-    padding: 2px;
-    display: flex;
-    position: relative;
-  }
+/* Custom Navbar Styles */
+.navbar-with-bar {
+  background-color: rgb(39, 39, 39);
+  padding: 2px;
+  display: flex;
+  position: relative;
+}
 
-  .navbar {
-    text-decoration: none;
-        text-transform: uppercase;
-    color: #fff;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 17px;
-    margin-right: 10px;
-    margin-bottom: -2px;
-    position: relative;
-    font-size: 11px;
-    letter-spacing: 1.05px;
-    line-height: 16px;
-  }
+.navbar-with-bar a {
+  /* Apply styles only to the specified class */
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 17px;
+  margin-right: 10px;
+  margin-bottom: -2px;
+  position: relative;
+  font-size: 11px;
+  letter-spacing: 1.05px;
+  line-height: 16px;
+}
 
-  .nav:hover {
-          text-decoration: none;
-    color: rgb(54, 155, 28);
-  }
+.navbar-with-bar a:hover {
+  text-decoration: none;
+  color: rgb(54, 155, 28);
+}
 
-  .navbar::after {
-          text-decoration: none;
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: rgb(54, 155, 28);
-    transition: height 0.3s;
-  }
+.navbar-with-bar a::after {
+  text-decoration: none;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgb(54, 155, 28);
+  transition: height 0.3s;
+}
 
-  .navbar.active::after {
-          text-decoration: none;
-    height: 5px;
-    animation: slideBar 0.3s forwards;
-  }
+.navbar-with-bar a.active::after,
+.navbar-with-bar a:not(.active):hover::after {
+  height: 5px;
+  animation: slideBar 0.3s forwards;
+}
 
-  .navbar:not(.active):hover::after {
-          text-decoration: none;
-    height: 5px;
-    animation: slideBar 0.3s forwards;
-  }
+.navbar-with-bar a:not(:hover):not(.active)::after {
+  animation: slideOutBar 0.3s forwards;
+}
 
-  .navbar:not(:hover):not(.active)::after {
-          text-decoration: none;
-    animation: slideOutBar 0.3s forwards;
-  }
-  text {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 40px;
-    text-transform: capitalize;
-padding: 6px;
-text-decoration: none;
-    }
-
-    text:hover {
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 40px;
-      text-transform: capitalize;
-      color: #fff;
+/* Stile für die Klasse .text */
+.text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 40px;
+  text-transform: capitalize;
   padding: 6px;
   text-decoration: none;
-      }
+}
 
-
+/* Weitere Stile für andere Elemente */
 .btn.dropdown-toggle {
-    font-size: 11px;
-    line-height: 40px;
+  font-size: 11px;
+  line-height: 40px;
   color: #fff;
   text-transform: uppercase;
   border: 0px solid #dee2e6; /* Menu border */
