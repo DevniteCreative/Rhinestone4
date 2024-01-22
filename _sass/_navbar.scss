@@ -80,8 +80,9 @@ nav a.text::after
 /* Weitere spezielle Zustände hier, falls nötig */
 {
     /* Überschreibe oder entferne die Stile für diese speziellen Links */
-    height: 0;
-    animation: none;
+    color: #fff;
+    height: 0 !important;
+    animation: none !important;
 }
 
 
