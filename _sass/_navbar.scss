@@ -32,12 +32,12 @@
     line-height: 16px;
   }
 
-  nav a:hover {
+  .nav a:hover {
           text-decoration: none;
     color: rgb(54, 155, 28);
   }
 
-  nav a::after {
+  .nav a::after {
           text-decoration: none;
     content: '';
     display: block;
@@ -50,19 +50,19 @@
     transition: height 0.3s;
   }
 
-  nav a.active::after {
+  .nav a.active::after {
           text-decoration: none;
     height: 5px;
     animation: slideBar 0.3s forwards;
   }
 
-  nav a:not(.active):hover::after {
+  .nav a:not(.active):hover::after {
           text-decoration: none;
     height: 5px;
     animation: slideBar 0.3s forwards;
   }
 
-  nav a:not(:hover):not(.active)::after {
+  .nav a:not(:hover):not(.active)::after {
           text-decoration: none;
     animation: slideOutBar 0.3s forwards;
   }
