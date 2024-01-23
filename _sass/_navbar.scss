@@ -102,7 +102,7 @@ nav a.text::after
   border: 0px solid #dee2e6; /* Menu border */
 }
 
-.dropdown-item {
+nav a.dropdown-item {
   color: #fff; /* Text color of dropdown items */
   padding: 8px 16px; /* Padding of dropdown items */
   text-decoration: none; /* No underline for links */
@@ -110,7 +110,13 @@ nav a.text::after
 }
 
 /* Highlight effect on hover of a dropdown item */
-.dropdown-item:hover {
+nav a.dropdown-item:hover {
   background-color: rgb(45, 45, 45); /* Background color on hover */
   color: #fff; /* Text color on hover */
+  animation: none;
+  height: 0px;
+}
+nav a.dropdown-item::after {
+  animation: none;
+  height: 0px;
 }
