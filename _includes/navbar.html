@@ -1,68 +1,29 @@
 <nav>
   <a class="text" href="/">Documentation.Testing</a>
-        {%- assign html_pages = site.html_pages | sort: 'weight' -%}
-      {%- assign filtered_pages = "" | split: "" -%}
+<ul class="navbar-nav">
+  {% for page in site.pages %}
+    {% if page.path contains 'UEDN' %}
+      {% assign parts = page.path | split: '/' %}
+      {% if parts.size == 2 %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ page.url | relative_url }}">{{ page.title }}</a>
+        </li>
+      {% elsif parts.size > 2 %}
+        {% assign parent = parts[1] %}
+        {% if parent != previous_parent %}
+          {% if forloop.index != 1 %}</div></li>{% endif %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown{{ forloop.index }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ parent }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown{{ forloop.index }}">
+        {% endif %}
+        <a class="dropdown-item" href="{{ page.url | relative_url }}">{{ page.title }}</a>
+        {% assign previous_parent = parent %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  </div></li>
+</ul>
 
-      {%- for html_page in html_pages -%} 
-
-        {%- assign exclude = false -%}
-
-        {%- for exclude_path in site.nav_exclude -%}
-
-          {%- if exclude_path == html_page.path -%}
-            {%- assign exclude = true -%}
-            {%- break -%}
-          {%- elsif exclude_path contains '**' -%}
-            {%- assign match = exclude_path | remove: '**' -%}
-            {%- if html_page.path contains match -%}
-              {%- assign exclude = true -%}
-              {%- break -%}
-            {%- endif -%}
-          {%- endif -%}
-
-        {%- endfor -%}
-
-        {%- unless exclude -%}
-          {%- assign filtered_pages = filtered_pages | push: html_page -%}
-        {%- endunless -%}
-
-      {%- endfor -%}
-
-      {% for html_page in filtered_pages %}  
-
-        {%- if page.url contains html_page.url -%}
-          {%- assign active_status = "active" -%}
-        {%- else -%}
-          {%- assign active_status = "" -%}
-        {%- endif -%}
-
-        {%- if html_page.external_url -%}
-          {%- assign url = html_page.external_url -%}
-        {%- else -%}
-          {%- assign url = html_page.url | relative_url -%}
-        {%- endif -%}
-
-        <a class="{{ active_status }}" href="{{ url }}" {%- if html_page.external_url and site.open_new_tab -%} {%- endif -%} >{{ html_page.title }}</a>
-
-      {% endfor %}
-    {%- if html_page.url contains '/' -%}
-      <div class="dropdown">
-        <button class="btn dropdown-toggle {{ active_status }}" type="button" data-toggle="dropdown" aria-expanded="false">
-          {{ html_page.title }}
-        </button>
-        <div class="dropdown-menu">
-          <!-- Hier können Sie Links zu den Unterseiten hinzufügen -->
-        </div>
-      </div>
-    {%- else -%}
-      <a class="{{ active_status }}" href="{{ url }}" {%- if html_page.external_url and site.open_new_tab -%} {%- endif -%} >{{ html_page.title }}</a>
-    {%- endif -%}
-  <div class="dropdown">
-    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
-      Legal
-    </button>
-    <div class="dropdown-menu">
-      <!-- Hier kannst du Links oder Inhalte für das Dropdown-Menü hinzufügen -->
-    </div>
-  </div>
 </nav>
