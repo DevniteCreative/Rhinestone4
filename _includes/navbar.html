@@ -1,27 +1,21 @@
 <nav>
   <a class="text" href="/">Documentation.Testing</a>
-<ul class="navbar-nav">
+<ul>
   {% for page in site.pages %}
       {% assign parts = page.path | split: '/' %}
       {% if parts.size == 2 %}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ page.url | relative_url }}">{{ page.title }}</a>
-        </li>
+        <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
       {% elsif parts.size > 2 %}
         {% assign parent = parts[1] %}
         {% if parent != previous_parent %}
-          {% if forloop.index != 1 %}</div></li>{% endif %}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown{{ forloop.index }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              {{ parent }}
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown{{ forloop.index }}">
+          {% if forloop.index != 1 %}</ul></li>{% endif %}
+          <li><a href="#">{{ parent }}</a>
+            <ul>
         {% endif %}
-        <a class="dropdown-item" href="{{ page.url | relative_url }}">{{ page.title }}</a>
+        <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
         {% assign previous_parent = parent %}
       {% endif %}
   {% endfor %}
-  </div></li>
+  </ul></li>
 </ul>
-
 </nav>
