@@ -1,116 +1,33 @@
-/* Keyframes should be defined before they're used */
-@keyframes slideBar {
-    from { height: 0; }
-    to { height: 5px; }
-  }
-
-  @keyframes slideOutBar {
-    from { height: 5px; }
-    to { height: 0; }
-  }
-
-  /* Custom Navbar Styles */
-  nav {
-    background-color: rgb(39, 39, 39);
-    padding: 2px;
-    display: flex;
-    position: relative;
-  }
-
-  nav a {
-    text-decoration: none;
-        text-transform: uppercase;
+body {
+    background-color: #2b2b2b;
     color: #fff;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 17px;
-    margin-right: 10px;
-    margin-bottom: -2px;
-    position: relative;
-    font-size: 11px;
-    letter-spacing: 1.05px;
-    line-height: 16px;
-  }
+    font-family: Arial, sans-serif;
+}
 
-  nav a:hover {
-          text-decoration: none;
-    color: rgb(54, 155, 28);
-  }
+.navbar {
+    background-color: #1f1f1f;
+}
 
-  nav a::after {
-          text-decoration: none;
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: rgb(54, 155, 28);
-    transition: height 0.3s;
-  }
-
-  nav a.active::after {
-          text-decoration: none;
-    height: 5px;
-    animation: slideBar 0.3s forwards;
-  }
-
-  nav a:not(.active):hover::after {
-          text-decoration: none;
-    height: 5px;
-    animation: slideBar 0.3s forwards;
-  }
-
-  nav a:not(:hover):not(.active)::after {
-          text-decoration: none;
-    animation: slideOutBar 0.3s forwards;
-  }
-  nav a.text{
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 40px;
-    text-transform: capitalize;
-padding: 6px;
-text-decoration: none;
-    }
-
-    nav a.text:hover,
-nav a.text::after
-/* Weitere spezielle Zustände hier, falls nötig */
-{
-    /* Überschreibe oder entferne die Stile für diese speziellen Links */
+.navbar .navbar-brand {
     color: #fff;
-    height: 0 !important;
-    animation: none !important;
 }
 
-
-.btn.dropdown-toggle {
-    font-size: 11px;
-    line-height: 40px;
-  color: #fff;
-  text-transform: uppercase;
-  border: 0px solid #dee2e6; /* Menu border */
-  outline: none;
-  box-shadow: none;
+.navbar .navbar-nav .nav-link {
+    color: #fff;
 }
 
-.dropdown-menu {
-  background-color: rgb(39, 39, 39); /* Menu background color */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Menu shadow */
-  border: 0px solid #dee2e6; /* Menu border */
+.navbar .navbar-nav .dropdown-menu {
+    background-color: #1f1f1f;
 }
 
-nav a.dropdown-item {
-  color: #fff; /* Text color of dropdown items */
-  padding: 8px 16px; /* Padding of dropdown items */
-  text-decoration: none; /* No underline for links */
-  display: block; /* Display each item as a block */
+.navbar .navbar-nav .dropdown-item {
+    color: #fff;
 }
 
-/* Highlight effect on hover of a dropdown item */
-nav a.dropdown-item:hover {
-  background-color: rgb(45, 45, 45); /* Background color on hover */
-  color: #fff; /* Text color on hover */
+.navbar .navbar-toggler {
+    border-color: #fff;
+}
+
+.navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
