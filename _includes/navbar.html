@@ -2,7 +2,6 @@
   <a class="text" href="/">Documentation.Testing</a>
 <ul class="navbar-nav">
   {% for page in site.pages %}
-    {% if page.path contains 'UEDN' %}
       {% assign parts = page.path | split: '/' %}
       {% if parts.size == 2 %}
         <li class="nav-item">
@@ -21,7 +20,6 @@
         <a class="dropdown-item" href="{{ page.url | relative_url }}">{{ page.title }}</a>
         {% assign previous_parent = parent %}
       {% endif %}
-    {% endif %}
   {% endfor %}
   </div></li>
 </ul>
